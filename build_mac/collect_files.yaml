@@ -1,0 +1,41 @@
+--- 
+- 
+  :basedir: "../../.."
+  :todir: build_dir
+  :include: 
+    - lib/Verbs
+    - lib/metadata
+    - lib/util
+    - lib/disk
+    - lib/fs
+    - lib/db
+    - lib/encryption
+    - lib/blackbox
+    - lib/MiqVm
+    - lib/VolumeManager
+    - tools/MiqVmExplorer/MiqVmExplorer.rb
+    - tools/MiqVmExplorer/MiqVmExplorerOps.rb
+    - tools/MiqVmExplorer/MiqVmExplorerParser.rb
+  :exclude: 
+    - !ruby/regexp /\/\.svn/
+    - !ruby/regexp /~$/
+    - !ruby/regexp /\/NTFSCPP/
+    - !ruby/regexp /\.c$/
+    - !ruby/regexp /\.h$/
+    - !ruby/regexp /\.o$/
+    - !ruby/regexp /dos_mbr.img$/
+    - !ruby/regexp /test.rb$/
+    - !ruby/regexp /\/rdoc$/
+    - !ruby/regexp /\/test$/
+    - !ruby/regexp /\/examples$/
+    - !ruby/regexp /\/doc$/
+    - !ruby/regexp /\/miqCryptInit.rb$/
+  :encrypt: 
+    - !ruby/regexp /\.rb$/
+  :noencrypt: 
+    - !ruby/regexp /\/encryption\//
+- 
+  :basedir: ".."
+  :todir: build_dir
+  :include: 
+    - init.rb
